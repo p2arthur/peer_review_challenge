@@ -43,12 +43,12 @@ I'm a fullstack web developer with over 4 years of experience focused on React, 
 
 **Uses react router useSearchParams() hook under the hood to get the transaction params**
 **transformedParams()**
-_1 - Transforms the params from the URL into transaction params and group them by index_
+1 - Transforms the params from the URL into transaction params and group them by index
 
 **transformSearchParamsTransations()**
-_2 - Transform the groups of transaction params into actual transaction objects and pass them into a zod form_
-_3 - Validates the form fields with zod_
-_4 - P_
+2 - Transform the groups of transaction params into actual transaction objects and pass them into a zod form
+3 - Validates the form fields with zod
+4 - P
 
 ```ts
 export function useTransactionSearchParamsBuilder() {
