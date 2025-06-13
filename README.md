@@ -42,13 +42,18 @@ I'm a fullstack web developer with over 4 years of experience focused on React, 
 ### 🧩 Entry Point – `useTransactionSearchParamsBuilder`
 
 **Uses react router useSearchParams() hook under the hood to get the transaction params**
-**transformedParams()**
+
+**transformedParams() - parameter transformation**
+
 1 - Transforms the params from the URL into transaction params and group them by index
 
-**transformSearchParamsTransations()**
+**transformSearchParamsTransations() - Transaction transformation and zod validation**
+
 2 - Transform the groups of transaction params into actual transaction objects and pass them into a zod form
-3 - Validates the form fields with zod
-4 - P
+
+3 - Validates the form fields with zod - displays error if invalid fields
+
+4 - Populates the transactions array of the Transaction Wizard UI with the valid data
 
 ```ts
 export function useTransactionSearchParamsBuilder() {
