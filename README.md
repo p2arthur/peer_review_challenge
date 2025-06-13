@@ -24,6 +24,7 @@ I'm a fullstack web developer with over 4 years of experience focused on React, 
   - Built `weDev`, a no-code DAO launchpad using AlgoKit 3.0
   - Collaborated with Algorand Foundation team members and senior ecosystem developers
 - Regularly work on **LangChain AI integrations**, combining Web3 data with intelligent agents.
+- Deeply connected with the ecosystem and passionate about making Web3 tools more accessible and developer-friendly.
 
 ---
 
@@ -35,6 +36,8 @@ I'm a fullstack web developer with over 4 years of experience focused on React, 
 
 **Goal:** Allow users to pre-fill transaction forms in the UI by passing URL parameters like `type[0]=pay`, `sender[0]`, etc.
 
+This was an excellent opportunity to work within a real production-grade codebase and follow patterns designed for clarity and extensibility.
+
 ---
 
 ## 🛠️ Implementation Breakdown
@@ -43,19 +46,14 @@ I'm a fullstack web developer with over 4 years of experience focused on React, 
 
 _Uses react router useSearchParams() hook under the hood to get the transaction params_
 
-**transformedParams()** - parameter transformation
+**transformedParams()** - parameter transformation  
+**transformSearchParamsTransations()** - transaction transformation and zod validation
 
-1 - Transforms the params from the URL into transaction params and group them by index
-
-**transformSearchParamsTransations()** - Transaction transformation and zod validation
-
-2 - Dispathes the params based on the transaction type in the url - if(pay)
-
-3 - Transform the groups of transaction params into actual transaction objects and pass them into a zod form
-
-4 - Validates the form fields with zod - displays error if invalid fields
-
-5 - Pushes the transactions array from the URL seach params functionality into the Transactions array of the transaction wizards, that then populates the User interface
+1. Transforms the params from the URL into transaction params and groups them by index
+2. Dispatches the params based on the transaction type in the URL (e.g., `pay`)
+3. Transforms grouped params into transaction objects
+4. Validates the fields using Zod schema
+5. Pushes the transactions into the transaction wizard for UI rendering
 
 ```ts
 export function useTransactionSearchParamsBuilder() {
@@ -189,7 +187,7 @@ it("should reject amount = 0", () => {
 ## 📝 Documentation Practices
 
 - Documented supported fields and examples in the README.
-- Used `@param` and `@throws` JSDoc annotations:
+- Added JSDoc-style comments to describe function parameters and expected outputs:
 
 ```ts
 /**
@@ -199,26 +197,32 @@ it("should reject amount = 0", () => {
  */
 ```
 
+This helped me better understand how to make code easier to onboard and safer to extend—skills I want to keep improving.
+
 ---
 
 ## 🌱 Reflections & Improvements
 
-Throughout this challenge, I learned a lot by following the existing architecture and patterns in the codebase. I became more conscious of how to:
+Throughout this challenge, I learned a lot by following the architecture and conventions of a well-maintained codebase. It gave me new insight into:
 
-- **Write better inline documentation** with JSDoc
-- **Think through edge cases and validation** with Zod
-- **Structure feature design** to align with product goals
+- Writing clearer documentation using JSDoc
+- Handling edge cases proactively with Zod
+- Designing modular feature logic to integrate cleanly with existing systems
 
-One thing I would improve is **starting with unit tests** earlier to isolate and validate logic before jumping into integration. I also realized that while I’m comfortable with building features, I want to improve how I document them for others, and how I approach modular, scalable design from day one.
+Some areas I’d like to keep improving:
 
-This project helped me grow in that direction, and I’d love to keep building in environments that value these practices.
+- **Feature design:** I want to be more deliberate in planning, scoping, and documenting features.
+- **Testing strategy:** I’d start with unit tests earlier to validate isolated logic before layering on integration.
+- **Developer empathy:** Writing better docs and validation logic makes a huge difference for others working in the same code.
+
+This challenge made me excited about the kind of team and culture I want to be part of. I’d love to work in a highly collaborative, well-organized, and impact-driven environment.
 
 ---
 
 ## 🙌 Final Thoughts
 
-This challenge was incredibly rewarding and aligned with the kind of thoughtful, organized, and forward-looking development environment I hope to be part of.
+This was more than just a coding challenge—it was a glimpse into the kind of codebase I want to contribute to every day.
 
-Joining Algorand and working with developers I met at the Castell Dcode retreat—including some of my biggest inspirations in this space—would be a dream opportunity.
+Joining Algorand and working with the developers I met at the Castell Dcode retreat—including some of my biggest inspirations—would be a dream come true.
 
 Thanks for reviewing my work! 🚀
