@@ -41,13 +41,13 @@ I'm a fullstack web developer with over 4 years of experience focused on React, 
 
 ### 🧩 Entry Point – `useTransactionSearchParamsBuilder`
 
-**Uses react router useSearchParams() hook under the hood to get the transaction params**
+_Uses react router useSearchParams() hook under the hood to get the transaction params_
 
-**transformedParams() - parameter transformation**
+**transformedParams()** - parameter transformation
 
 1 - Transforms the params from the URL into transaction params and group them by index
 
-**transformSearchParamsTransations() - Transaction transformation and zod validation**
+**transformSearchParamsTransations()** - Transaction transformation and zod validation
 
 2 - Transform the groups of transaction params into actual transaction objects and pass them into a zod form
 
