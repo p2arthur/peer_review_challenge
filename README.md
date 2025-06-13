@@ -41,6 +41,15 @@ I'm a fullstack web developer with over 4 years of experience focused on React, 
 
 ### 🧩 Entry Point – `useTransactionSearchParamsBuilder`
 
+**Uses react router useSearchParams() hook under the hood to get the transaction params**
+**transformedParams()**
+_1 - Transforms the params from the URL into transaction params and group them by index_
+
+**transformSearchParamsTransations()**
+_2 - Transform the groups of transaction params into actual transaction objects and pass them into a zod form_
+_3 - Validates the form fields with zod_
+_4 - P_
+
 ```ts
 export function useTransactionSearchParamsBuilder() {
   const [searchParams] = useSearchParams();
