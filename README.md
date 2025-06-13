@@ -49,11 +49,13 @@ _Uses react router useSearchParams() hook under the hood to get the transaction 
 
 **transformSearchParamsTransations()** - Transaction transformation and zod validation
 
-2 - Transform the groups of transaction params into actual transaction objects and pass them into a zod form
+2 - Dispathes the params based on the transaction type in the url - if(pay)
 
-3 - Validates the form fields with zod - displays error if invalid fields
+3 - Transform the groups of transaction params into actual transaction objects and pass them into a zod form
 
-4 - Populates the transactions array of the Transaction Wizard UI with the valid data
+4 - Validates the form fields with zod - displays error if invalid fields
+
+5 - Pushes the transactions array from the URL seach params functionality into the Transactions array of the transaction wizards, that then populates the User interface
 
 ```ts
 export function useTransactionSearchParamsBuilder() {
